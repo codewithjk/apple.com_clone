@@ -5,7 +5,7 @@
 }
 
 
-@media screen and (max-width:1530px){
+@media screen and (max-width:3000px){
     .title{
         font-size: 56px !important;
     }
@@ -15,15 +15,9 @@
         font-weight: 400 !important;
         letter-spacing: .004em !important;
     }
-    /* body{
-        
-        font-size: 1.647rem !important;
-        background-color: rgb(189, 30, 210) !important;
-
-    } */
     
 }
-@media screen and (max-width:1066px){
+@media screen and (max-width:1070px){
     .title{
         font-size: 48px !important;
     }
@@ -34,12 +28,6 @@
     letter-spacing: .009em !important;
     }
     
-    /* body{
-        
-        font-size: 1.647rem !important;
-        background-color: rgb(189, 30, 210) !important;
-
-    } */
     
 }
 @media screen and (max-width: 850px){
@@ -55,12 +43,7 @@
     .large-nav{
         display: none;
     }
-    /* body{
-        background-color:red;
-        font-size: 1.412rem !important;
-        background-color: rgb(42, 67, 165) !important;
-
-    } */
+    
     
 }
 

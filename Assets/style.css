@@ -25,10 +25,13 @@ html, body{
 header{
     position: static;
     top: 0;
-    background-color: rgba(22, 22, 23, 0.933) !important;
+    background-color: rgba(22, 22, 23, 0.933) ;
     color: rgba(255, 255, 255, 0.8);
     font-size: 12px;
     font-weight: 400;
     letter-spacing: -.01em;
     line-height: 1;
 }
+.vh-50 {
+    height: 50vh;
+  }
