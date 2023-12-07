@@ -1,8 +1,8 @@
-
+/* 
 :root{
     --minWidth:730px;
     
-}
+} */
 
 
 @media screen and (max-width:3000px){
@@ -40,8 +40,12 @@
     font-weight: 400 !important;
     letter-spacing: 0em !important;
     }
+    /* large nav hide  */
     .large-nav{
         display: none;
+    }
+    .large-footer{
+        display: none !important;
     }
     
     
@@ -61,6 +65,10 @@
     .small-nav{
         display: none;
     }
+    .small-footer{
+        display: none !important;
+    }
+    
     
 }
 

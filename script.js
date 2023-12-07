@@ -1,6 +1,6 @@
 
 
-
+// nav bar
 function toggleIcons() {
     
     var iconX = document.getElementById('icon1');
@@ -14,8 +14,6 @@ function toggleIcons() {
       Items.classList.remove("d-none");
       document.getElementsByTagName('header').classList.add('bg-black');
       
-      
-
     } else {
       iconX.style.display = 'none';
       icon2.style.display = 'inline';
@@ -29,7 +27,7 @@ function toggleIcons() {
 
 
 
-// hero1 background image
+// background image path changing.
 function setResponsiveImage(elementId, smallImagePath, mediumImagePath, largeImagePath) {
     const screenSize = window.innerWidth;
     let imagePath;
@@ -45,7 +43,7 @@ function setResponsiveImage(elementId, smallImagePath, mediumImagePath, largeIma
     document.getElementById(elementId).src = imagePath;
 }
 
-
+function setAllImage(){
 setResponsiveImage('hero1', 'Assets/images/hero_idpd__bh9gqwj0jrg2_small_2x.jpg', 'Assets/images/hero_idpd__bh9gqwj0jrg2_medium_2x.jpg', 'Assets/images/hero_idpd__bh9gqwj0jrg2_large_2x.jpg');
 setResponsiveImage('hero2','Assets/images/hero_apple_watch_series_9__x5wo4ptz2giu_small_2x.jpg','Assets/images/hero_apple_watch_series_9__x5wo4ptz2giu_medium_2x.jpg','Assets/images/hero_apple_watch_series_9__x5wo4ptz2giu_large_2x.jpg');
 setResponsiveImage('hero3','Assets/images/hero_iphone15pro__i70z9oz3hj2i_small_2x.jpg','Assets/images/hero_iphone15pro__i70z9oz3hj2i_medium_2x.jpg','Assets/images/hero_iphone15pro__i70z9oz3hj2i_large_2x.jpg');
@@ -58,12 +56,42 @@ setResponsiveImage('promo5','Assets/images/promo_ipad__fioegapg12qi_small_2x.jpg
 setResponsiveImage('promo6','Assets/images/promo_iphone_tradein__bugw15ka691e_small_2x.jpg','Assets/images/promo_iphone_tradein__bugw15ka691e_medium_2x.jpg','Assets/images/promo_iphone_tradein__bugw15ka691e_large_2x.jpg');
 setResponsiveImage('promoWatchLogo','Assets/images/promo_logo_apple_watch_ultra2__ggg2x39rsvqu_small_2x.png','Assets/images/promo_logo_apple_watch_ultra2__ggg2x39rsvqu_medium_2x.png','Assets/images/promo_logo_apple_watch_ultra2__ggg2x39rsvqu_large_2x.png');
 setResponsiveImage('tradeIn','Assets/images/logo_tradein__d1fpktgipvki_small_2x.png','Assets/images/logo_tradein__d1fpktgipvki_medium_2x.png','Assets/images/logo_tradein__d1fpktgipvki_large_2x.png')
+}
 
-// Call setResponsiveOne when the document is fully loaded or on window resize
-window.addEventListener('load', setResponsiveImage);
-window.addEventListener('resize', setResponsiveImage);
-
-
+window.addEventListener('load', setAllImage);
+window.addEventListener('resize', setAllImage);
 
 
-Assets/images/hero_apple_watch_series_9__x5wo4ptz2giu_large_2x.jpg
+// footer dropdown
+
+// function dropdown(id){
+//   console.log(this);
+//   let item = document.getElementById(id);
+//   if(item.classList.contains("d-none")){
+//     item.classList.remove("d-none");
+//   }else{
+//     item.classList.add("d-none");
+//   }
+
+// }
+
+
+
+let dropdownList = document.querySelectorAll(".dropdownlist");
+
+// console.log(dropdownList);
+
+dropdownList.forEach((item)=>{
+  item.addEventListener("click",()=>{
+    element  = item.nextElementSibling;
+    console.log(item.children[1]);
+    item.children[1].classList.toggle("rotate");
+    console.log(element);
+    if(element.classList.contains("d-none")){
+          element.classList.remove("d-none");
+        }else{
+          element.classList.add("d-none");
+        }
+    
+  })
+})
